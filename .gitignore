@@ -1,0 +1,6 @@
+#ignore .out files#
+*.out
+#ignore .dat files#
+*.dat
+#ignore .gitignore#
+
