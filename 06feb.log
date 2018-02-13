@@ -1,0 +1,445 @@
+ _   _ _   __  __        ____            _    _                
+| | | (_) |  \/  |_ __  |  _ \ _ __ __ _| | _| |__   __ _ _ __ 
+| |_| | | | |\/| | '__| | |_) | '__/ _` | |/ / '_ \ / _` | '__|
+|  _  | | | |  | | | _  |  __/| | | (_| |   <| | | | (_| | |   
+|_| |_|_| |_|  |_|_|(_) |_|   |_|  \__,_|_|\_\_| |_|\__,_|_|   
+                                                               
+prakhar@prakhar-HP-Notebook:~$ ls
+anaconda3                        first.ipynb  Templates
+Anaconda3-5.0.1-Linux-x86_64.sh  Music        Untitled1.ipynb
+Desktop                          Pictures     Untitled2.ipynb
+Documents                        Public       Untitled.ipynb
+Downloads                        sample.txt   Videos
+examples.desktop                 sem2
+prakhar@prakhar-HP-Notebook:~$ cd sem2
+prakhar@prakhar-HP-Notebook:~/sem2$ ls
+a.out  p1.cpp  p.cpp  pro1.cpp
+prakhar@prakhar-HP-Notebook:~/sem2$ cp p1.cpp /p.cpp
+cp: cannot create regular file '/p.cpp': Permission denied
+prakhar@prakhar-HP-Notebook:~/sem2$ sudo cp p1.cpp /p.cpp
+[sudo] password for prakhar: 
+prakhar@prakhar-HP-Notebook:~/sem2$ cd ..
+prakhar@prakhar-HP-Notebook:~$ ls
+anaconda3                        first.ipynb  Templates
+Anaconda3-5.0.1-Linux-x86_64.sh  Music        Untitled1.ipynb
+Desktop                          Pictures     Untitled2.ipynb
+Documents                        Public       Untitled.ipynb
+Downloads                        sample.txt   Videos
+examples.desktop                 sem2
+prakhar@prakhar-HP-Notebook:~$ pwd
+/home/prakhar
+prakhar@prakhar-HP-Notebook:~$ cd /
+prakhar@prakhar-HP-Notebook:/$ ls
+bin    dev   initrd.img      lib64       mnt    proc  sbin  sys  var
+boot   etc   initrd.img.old  lost+found  opt    root  snap  tmp  vmlinuz
+cdrom  home  lib             media       p.cpp  run   srv   usr  vmlinuz.old
+prakhar@prakhar-HP-Notebook:/$ mv p.cpp /home/prakhar/p.cpp
+mv: cannot move 'p.cpp' to '/home/prakhar/p.cpp': Permission denied
+prakhar@prakhar-HP-Notebook:/$ sudo -s
+ _   _ _   __  __        ____            _    _                
+| | | (_) |  \/  |_ __  |  _ \ _ __ __ _| | _| |__   __ _ _ __ 
+| |_| | | | |\/| | '__| | |_) | '__/ _` | |/ / '_ \ / _` | '__|
+|  _  | | | |  | | | _  |  __/| | | (_| |   <| | | | (_| | |   
+|_| |_|_| |_|  |_|_|(_) |_|   |_|  \__,_|_|\_\_| |_|\__,_|_|   
+                                                               
+root@prakhar-HP-Notebook:/# mv p.cpp /home/prakhar/p.cpp
+root@prakhar-HP-Notebook:/# ls
+bin    dev   initrd.img      lib64       mnt   root  snap  tmp  vmlinuz
+boot   etc   initrd.img.old  lost+found  opt   run   srv   usr  vmlinuz.old
+cdrom  home  lib             media       proc  sbin  sys   var
+root@prakhar-HP-Notebook:/# cd ~
+root@prakhar-HP-Notebook:~# ls
+anaconda3                        first.ipynb  sem2
+Anaconda3-5.0.1-Linux-x86_64.sh  Music        Templates
+Desktop                          p.cpp        Untitled1.ipynb
+Documents                        Pictures     Untitled2.ipynb
+Downloads                        Public       Untitled.ipynb
+examples.desktop                 sample.txt   Videos
+root@prakhar-HP-Notebook:~# mkdir wd
+root@prakhar-HP-Notebook:~# mv p.cpp /home/prakhar/wd/p.cpp
+root@prakhar-HP-Notebook:~# cd wd
+root@prakhar-HP-Notebook:~/wd# ls
+p.cpp
+root@prakhar-HP-Notebook:~/wd# git init
+The program 'git' is currently not installed. You can install it by typing:
+apt install git
+root@prakhar-HP-Notebook:~/wd# apt install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libllvm3.8 libllvm4.0 libmircommon5 linux-headers-4.4.0-31
+  linux-headers-4.4.0-31-generic linux-image-4.4.0-31-generic
+  linux-image-extra-4.4.0-31-generic linux-signed-image-4.4.0-31-generic
+  ubuntu-core-launcher
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 56 not upgraded.
+Need to get 3,857 kB of archives.
+After this operation, 25.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 liberror-perl all 0.17-1.2 [19.6 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 git-man all 1:2.7.4-0ubuntu1.3 [736 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 git amd64 1:2.7.4-0ubuntu1.3 [3,102 kB]
+Fetched 3,857 kB in 1s (2,085 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 239322 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.2_all.deb ...
+Unpacking liberror-perl (0.17-1.2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.7.4-0ubuntu1.3_all.deb ...
+Unpacking git-man (1:2.7.4-0ubuntu1.3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.7.4-0ubuntu1.3_amd64.deb ...
+Unpacking git (1:2.7.4-0ubuntu1.3) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up liberror-perl (0.17-1.2) ...
+Setting up git-man (1:2.7.4-0ubuntu1.3) ...
+Setting up git (1:2.7.4-0ubuntu1.3) ...
+root@prakhar-HP-Notebook:~/wd# git init
+Initialized empty Git repository in /home/prakhar/wd/.git/
+root@prakhar-HP-Notebook:~/wd# ls
+p.cpp
+root@prakhar-HP-Notebook:~/wd# nano p.cpp
+root@prakhar-HP-Notebook:~/wd# g++ p.cpp
+root@prakhar-HP-Notebook:~/wd# ls
+a.out  p.cpp
+root@prakhar-HP-Notebook:~/wd# ./a.out >output.dat
+root@prakhar-HP-Notebook:~/wd# ./output.dat
+bash: ./output.dat: Permission denied
+root@prakhar-HP-Notebook:~/wd# sudo ./output.dat
+sudo: ./output.dat: command not found
+root@prakhar-HP-Notebook:~/wd# ls
+a.out  output.dat  p.cpp
+root@prakhar-HP-Notebook:~/wd# ./a.out
+
+ it is constructor
+ it is constructorinside the block
+ it is destructor
+ i'm in the program
+ it is destructorroot@prakhar-HP-Notebook:~/wd# git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	a.out
+	output.dat
+	p.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd# nano .gitignore
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	p.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd# nano .gitignore
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	p.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd# git add .
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   p.cpp
+
+root@prakhar-HP-Notebook:~/wd# git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@prakhar-HP-Notebook.(none)')
+root@prakhar-HP-Notebook:~/wd# git config 
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+
+root@prakhar-HP-Notebook:~/wd# git config --global user.email "agarwal.prakhar824@gmail.com"
+root@prakhar-HP-Notebook:~/wd# git config --global user.name  "prakhar"
+root@prakhar-HP-Notebook:~/wd# git commit -m "first commit"
+[master (root-commit) dadad3f] first commit
+ 1 file changed, 26 insertions(+)
+ create mode 100644 p.cpp
+root@prakhar-HP-Notebook:~/wd# git remote add origin "https://github.com/Prakhar824/6_feb_2018.git"
+root@prakhar-HP-Notebook:~/wd# git push -u origin master
+Username for 'https://github.com': agarwal.prakhar824@gmail.com
+Password for 'https://agarwal.prakhar824@gmail.com@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 363 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Prakhar824/6_feb_2018.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+root@prakhar-HP-Notebook:~/wd# ls
+a.out  output.dat  p.cpp
+root@prakhar-HP-Notebook:~/wd# mkdir sub
+root@prakhar-HP-Notebook:~/wd# cd sub
+root@prakhar-HP-Notebook:~/wd/sub# nano hello.pdf
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano hello.pdf
+root@prakhar-HP-Notebook:~/wd/sub# nano hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# ls
+hello.pdf  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# cd ..
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	sub/
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd# cd sub
+root@prakhar-HP-Notebook:~/wd/sub# git init
+Initialized empty Git repository in /home/prakhar/wd/sub/.git/
+root@prakhar-HP-Notebook:~/wd/sub# cd ..
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	sub/
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd# git add .
+root@prakhar-HP-Notebook:~/wd# git commit -m "second commit"
+[master 0bbe50d] second commit
+ 3 files changed, 3 insertions(+)
+ create mode 100644 sub/.hello.pdf.swp
+ create mode 100644 sub/hello.pdf
+ create mode 100644 sub/hi.cpp
+root@prakhar-HP-Notebook:~/wd# git push -u origin master
+Username for 'https://github.com': prakhar824
+Password for 'https://prakhar824@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 549 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/Prakhar824/6_feb_2018.git
+   dadad3f..0bbe50d  master -> master
+Branch master set up to track remote branch master from origin.
+root@prakhar-HP-Notebook:~/wd# ls /sub
+ls: cannot access '/sub': No such file or directory
+root@prakhar-HP-Notebook:~/wd# ls
+a.out  output.dat  p.cpp  sub
+root@prakhar-HP-Notebook:~/wd# cd sub
+root@prakhar-HP-Notebook:~/wd/sub# ls
+hello.pdf  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# ls -ah
+.  ..  .git  hello.pdf  .hello.pdf.swp  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# cd ..
+root@prakhar-HP-Notebook:~/wd# nano .gitignore
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd# git add .
+root@prakhar-HP-Notebook:~/wd# git commit
+Aborting commit due to empty commit message.
+root@prakhar-HP-Notebook:~/wd# 
+root@prakhar-HP-Notebook:~/wd# git commit -m "third commit"
+[master 8fa755e] third commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 .gitignore
+root@prakhar-HP-Notebook:~/wd# git push -u origin master
+Username for 'https://github.com': prakhar824
+Password for 'https://prakhar824@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Prakhar824/6_feb_2018.git
+   0bbe50d..8fa755e  master -> master
+Branch master set up to track remote branch master from origin.
+root@prakhar-HP-Notebook:~/wd# cd sub
+root@prakhar-HP-Notebook:~/wd/sub# ls
+hello.pdf  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.hello.pdf.swp
+	hello.pdf
+	hi.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd/sub# cd ..
+root@prakhar-HP-Notebook:~/wd# ls
+a.out  output.dat  p.cpp  sub
+root@prakhar-HP-Notebook:~/wd# nano .gitignore 
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@prakhar-HP-Notebook:~/wd# cd sub
+root@prakhar-HP-Notebook:~/wd/sub# git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.hello.pdf.swp
+	hello.pdf
+	hi.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@prakhar-HP-Notebook:~/wd/sub# cd ..
+root@prakhar-HP-Notebook:~/wd# nano .gitignore 
+root@prakhar-HP-Notebook:~/wd# nano .gitignore 
+root@prakhar-HP-Notebook:~/wd# wd
+wd: command not found
+root@prakhar-HP-Notebook:~/wd# pwd
+/home/prakhar/wd
+root@prakhar-HP-Notebook:~/wd# ls -ah
+.  ..  a.out  .git  .gitignore  output.dat  p.cpp  sub
+root@prakhar-HP-Notebook:~/wd# cat .gitignore
+#ignore .out files#
+*.out
+#ignore .dat files#
+*.dat
+#ignore .gitignore#
+*.pdf
+root@prakhar-HP-Notebook:~/wd# cd sub
+root@prakhar-HP-Notebook:~/wd/sub# ls
+hello.pdf  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# ls -ah
+.  ..  .git  hello.pdf  .hello.pdf.swp  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# rm .git
+rm: cannot remove '.git': Is a directory
+root@prakhar-HP-Notebook:~/wd/sub# rm -r .git
+root@prakhar-HP-Notebook:~/wd/sub# ls -ah
+.  ..  hello.pdf  .hello.pdf.swp  hi.cpp
+root@prakhar-HP-Notebook:~/wd/sub# cd ..
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@prakhar-HP-Notebook:~/wd# ls
+a.out  output.dat  p.cpp  sub
+root@prakhar-HP-Notebook:~/wd# nano 1.pdf
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@prakhar-HP-Notebook:~/wd# nano .gitignore 
+root@prakhar-HP-Notebook:~/wd# git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	1.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@prakhar-HP-Notebook:~/wd# 
+
