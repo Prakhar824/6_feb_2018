@@ -3,4 +3,8 @@
 #ignore .dat files#
 *.dat
 #ignore .gitignore#
-
+*.pdf
+#include 1.pdf#
+!1.pdf
+#ignoring the folder sub1#
+sub1/
